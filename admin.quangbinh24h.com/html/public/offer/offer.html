@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=1;"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <title>wapsize</title>
+    <style type="text/css">
+        * {padding: 0; margin: 0;}
+        body { font-size: 12px; font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14.5px; }
+        .bg { margin: 0 .5em 25px .5em; text-align: center;}
+        .to { text-align: center; }
+        .tit {
+            color: #999;
+            font-size: 1.4em;
+            margin-top: 15px;
+            text-align: center;
+            width: 100%;
+        }
+        .button a { display: inline-block; }
+        .button { padding: 5px 0 20px; text-align: center;}
+        .button img { width: 100px; }
+        .button a:last-child { margin-left: 5px; }
+        .ndt { color: #ae191a; }
+    </style>
+</head>
+<body>
+
+<div class="bg">
+    <h3 class="tit">Tải ứng dụng “<em class="ndt">Người Đưa Tin</em>”<br>
+        cho IOS và Android
+    </h3>
+
+    <div class="to">
+        <div class="inner">
+            <img src="images/iPhone.png" class="ip" id="img">
+        </div>
+    </div>
+    <div class="button">
+        <a href="" id="download"> <img class="taingay " src="images/tai-ngay.png"></a>
+        <a href="http://m.nguoiduatin.vn"><img class="tieptuc " src="images/tiep-tuc1.png"></a>
+    </div>
+</div>
+<script type='text/javascript'>
+    window.onload = function() {
+        window.docHeight = function() {
+            var D = document;
+            return Math.max(
+                    D.body.scrollHeight, D.documentElement.scrollHeight,
+                    D.body.offsetHeight, D.documentElement.offsetHeight,
+                    D.body.clientHeight, D.documentElement.clientHeight
+            );
+        };
+        var d           = window.document;
+        var img         = d.getElementById('img');
+        var download    = d.getElementById('download');
+        img.setAttribute('style', 'height : ' + (0.7 * window.innerHeight) + 'px');
+
+        if(document.body.offsetHeight <= window.innerHeight) {
+            d.getElementsByClassName('bg')[0].setAttribute('style', 'margin-bottom: '+(window.innerHeight-document.body.offsetHeight) + 'px');
+        }
+        window.scrollTo(0,document.body.scrollHeight);
+
+        if(navigator.userAgent.match(/Android/i)) {
+            download.href = "https://play.google.com/store/apps/details?id=vn.netlink.nguoiduatin";
+        }else if(navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)){
+            download.href = "https://itunes.apple.com/us/app/nguoiduatin/id675624128"
+        }
+
+        window.onresize = function() {
+            img.setAttribute('style', 'height : ' + (0.7 * window.innerHeight) + 'px');
+        };
+    };
+</script>
+</body>
+</html>

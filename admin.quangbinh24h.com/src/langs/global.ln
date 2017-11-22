@@ -1,0 +1,21 @@
+#    
+# Email : kph.acc@gmail.com
+# Yahoo : kph_kph@yahoo.com
+# Phone : +84902245620
+# 
+#  Global language file                             
+#
+# @author         $Author: kenchan ak binhlt $
+# @copyright    (c) kenchan
+# @package        K-CMS
+# @since        Tue. 06th April 2010  
+#
+#  
+----
+global :    
+    System : Hệ thống
+    title : Tin tuc cap nhat 24h
+    description : Đọc báo online
+    keyword : tin tức,tin 24h,đọc báo,tin nhanh
+    notfound : Không tìm thấy dữ liệu phù hợp
+    

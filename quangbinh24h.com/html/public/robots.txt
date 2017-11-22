@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://danang24h.vn/sitemap.xml
+Sitemap: http://danang24h.vn/sitemap_news.xml
